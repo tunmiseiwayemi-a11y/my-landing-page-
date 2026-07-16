@@ -6,201 +6,239 @@
     <title>The Data-Savvy Scholar | 5-Day Starter Kit</title>
     <style>
         :root {
-            --primary: #0f172a;       /* Deep slate */
-            --secondary: #0d9488;     /* Academic teal */
-            --accent: #f59e0b;        /* Amber yellow from flyer */
-            --dark-accent: #d97706;
-            --bg: #f8fafc;            /* Clean off-white */
-            --text: #334155;          /* Easy-on-the-eyes charcoal */
-            --card-bg: #ffffff;
-            --border: #e2e8f0;
+            --primary: #0f172a;       /* Elegant deep slate */
+            --secondary: #0d9488;     /* Academic teal accent */
+            --accent: #f59e0b;        /* Warm amber yellow matching your flyer */
+            --accent-hover: #d97706;
+            --bg-gradient: linear-gradient(185deg, #f8fafc 0%, #e2e8f0 100%);
+            --text-main: #1e293b;
+            --text-muted: #475569;
+            --card-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.1);
         }
 
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            line-height: 1.7;
-            color: var(--text);
-            background-color: var(--bg);
+            line-height: 1.8;
+            color: var(--text-main);
+            background: var(--bg-gradient);
+            min-height: 100vh;
             margin: 0;
             padding: 0;
         }
 
-        .container {
+        .wrapper {
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
 
-        /* Hero / Header */
+        /* Header Section */
         header {
             text-align: center;
-            padding: 20px 0 40px 0;
+            margin-bottom: 50px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(13, 148, 136, 0.1);
+            color: var(--secondary);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 20px;
         }
 
         h1 {
-            font-size: 2.4rem;
+            font-size: 2.6rem;
             color: var(--primary);
-            line-height: 1.25;
-            margin-bottom: 10px;
+            line-height: 1.2;
+            margin: 0 0 15px 0;
             font-weight: 800;
+            letter-spacing: -0.5px;
         }
 
-        .subheadline {
-            font-size: 1.2rem;
-            color: var(--secondary);
-            font-weight: 600;
-            margin-top: 0;
+        .lead-text {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            margin: 0;
         }
 
-        /* Main Card */
-        .main-card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
-            padding: 40px;
+        /* Main Content Card */
+        .container-card {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            padding: 50px;
             margin-bottom: 40px;
         }
 
         /* Flyer Container */
-        .flyer-wrapper {
+        .flyer-box {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
         }
 
-        .flyer-img {
+        .flyer-box img {
             width: 100%;
             max-width: 100%;
             height: auto;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
         }
 
-        /* Persuasive Copy */
-        .copy-section p {
+        .flyer-box img:hover {
+            transform: scale(1.01);
+        }
+
+        /* Copy Block */
+        .editorial-content p {
             font-size: 1.15rem;
-            color: var(--text);
-            margin-bottom: 20px;
-        }
-
-        .highlight-box {
-            background-color: #f1f5f9;
-            border-left: 4px solid var(--secondary);
-            padding: 20px;
-            border-radius: 0 8px 8px 0;
-            margin: 30px 0;
-        }
-
-        .highlight-box p {
-            margin: 0;
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        /* Interactive Curriculum */
-        .curriculum {
-            margin: 40px 0;
-        }
-
-        .curriculum h2 {
-            color: var(--primary);
-            font-size: 1.6rem;
-            margin-bottom: 20px;
-        }
-
-        .day-row {
-            padding: 15px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .day-row:last-child {
-            border-bottom: none;
-        }
-
-        .day-num {
-            font-weight: 800;
-            color: var(--secondary);
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            margin: 0;
-        }
-
-        .day-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin: 5px 0;
-        }
-
-        .day-text {
-            margin: 0;
-            color: #475569;
-        }
-
-        /* Big CTA Button Area */
-        .cta-area {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border-radius: 12px;
-            color: white;
-            margin: 40px 0;
-        }
-
-        .cta-heading {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .cta-sub {
-            font-size: 1rem;
-            opacity: 0.9;
+            color: var(--text-muted);
             margin-bottom: 25px;
         }
 
-        .btn {
+        .quote-callout {
+            border-left: 4px solid var(--secondary);
+            background-color: #f1f5f9;
+            padding: 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 35px 0;
+        }
+
+        .quote-callout p {
+            margin: 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        /* Custom Timeline / Curriculum */
+        .curriculum-timeline {
+            margin: 50px 0;
+        }
+
+        .curriculum-timeline h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .timeline-step {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .timeline-step:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .step-number {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--secondary);
+            background: rgba(13, 148, 136, 0.08);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .step-content p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* High Converting Call to Action */
+        .action-panel {
+            text-align: center;
+            padding: 45px 30px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 20px;
+            color: #ffffff;
+            margin: 50px 0;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+        }
+
+        .action-panel h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+        }
+
+        .action-panel p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin: 0 0 30px 0;
+        }
+
+        .btn-primary {
             display: inline-block;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--dark-accent) 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+            color: #ffffff;
             text-decoration: none;
-            padding: 16px 36px;
+            padding: 18px 45px;
             font-size: 1.25rem;
             font-weight: 700;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(217, 119, 6, 0.4);
-            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(245, 158, 11, 0.35);
+            transition: all 0.2s ease-in-out;
             border: none;
             cursor: pointer;
         }
 
-        .btn:hover {
+        .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(217, 119, 6, 0.5);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5);
         }
 
-        /* FAQ Section */
-        .faq-container {
-            margin-top: 60px;
+        /* Modern FAQ Section */
+        .faq-block {
+            margin-top: 70px;
         }
 
-        .faq-container h2 {
+        .faq-block h2 {
             text-align: center;
             color: var(--primary);
-            font-size: 1.8rem;
-            margin-bottom: 30px;
+            font-size: 2rem;
+            margin-bottom: 35px;
+            font-weight: 700;
         }
 
-        .faq-item {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 8px;
+        .accordion-item {
+            background: #ffffff;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            border-radius: 12px;
             margin-bottom: 15px;
             overflow: hidden;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.01);
+            transition: all 0.2s ease;
         }
 
-        .faq-question {
-            padding: 20px;
+        .accordion-header {
+            padding: 22px 28px;
             font-weight: 700;
             color: var(--primary);
             font-size: 1.1rem;
@@ -209,168 +247,201 @@
             justify-content: space-between;
             align-items: center;
             user-select: none;
-            background: #fff;
+            background: #ffffff;
+            transition: background 0.2s ease;
         }
 
-        .faq-answer {
+        .accordion-header:hover {
+            background: #f8fafc;
+        }
+
+        .accordion-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            background: #fafafb;
-            border-top: 0 solid var(--border);
+            transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #f8fafc;
         }
 
-        .faq-answer-content {
-            padding: 20px;
-            color: #475569;
-            font-size: 1rem;
+        .accordion-content-inner {
+            padding: 24px 28px;
+            color: var(--text-muted);
+            font-size: 1.05rem;
             margin: 0;
+            border-top: 1px solid #f1f5f9;
         }
 
-        .faq-icon::after {
-            content: '+';
-            font-size: 1.4rem;
+        .accordion-icon {
+            font-size: 1.5rem;
             color: var(--secondary);
             font-weight: bold;
+            transition: transform 0.2s ease;
         }
 
-        .faq-item.active .faq-icon::after {
-            content: '−';
-        }
-
-        .faq-item.active .faq-answer {
-            border-top: 1px solid var(--border);
+        .accordion-item.active .accordion-icon {
+            transform: rotate(45deg);
         }
 
         footer {
             text-align: center;
-            padding: 40px 0;
-            font-size: 0.9rem;
+            padding: 50px 0 20px 0;
+            font-size: 0.95rem;
             color: #94a3b8;
-            border-top: 1px solid var(--border);
-            margin-top: 60px;
+            border-top: 1px solid rgba(226, 232, 240, 0.8);
+            margin-top: 80px;
+        }
+
+        @media (max-width: 640px) {
+            .container-card {
+                padding: 25px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .timeline-step {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .step-number {
+                width: 40px;
+                height: 40px;
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Main Header -->
+    <div class="wrapper">
+        <!-- Main Top Header -->
         <header>
+            <span class="badge">Free 5-Day Starter Kit</span>
             <h1>Tired of Drowning in Grading Piles & Clunky SPSS Menus?</h1>
-            <p class="subheadline">The Data-Savvy Scholar: A Free 5-Day Starter Kit for Academics</p>
+            <p class="lead-text">Turn messy research and student data into stunning, publication-ready insights.</p>
         </header>
 
-        <div class="main-card">
-            <!-- Flyer Image Integration -->
-            <div class="flyer-wrapper">
-                <img src="1000498847.png" alt="The Data-Savvy Scholar Flyer" class="flyer-img">
+        <!-- Main Content Card -->
+        <div class="container-card">
+            
+            <!-- Exact Flyer Embedded -->
+            <div class="flyer-box">
+                <img src="1000498847.png" alt="The Data-Savvy Scholar Flyer">
             </div>
 
-            <!-- Authentic, Non-AI Persuasive Copy -->
-            <div class="copy-section">
-                <p>As researchers and educators, we went into academia to uncover insights and teach—not to lose entire weekends to manual grading spreadsheets or pull our hair out over steep, frustrating learning curves on outdated analysis tools.</p>
-                <p>You don't need a computer science background or hours of free time to make data work for you. This straightforward, fluff-free 5-day starter kit is engineered specifically for academic workflows. It focuses purely on high-yield, practical tools to help you reclaim your time and elevate your scholarly output.</p>
+            <!-- Highly Persuasive Copy -->
+            <div class="editorial-content">
+                <p>As researchers and educators, we didn't dedicate our careers to higher education to spend precious weekends battling clunky spreadsheets, tracing syntax errors, or struggling with outdated software interfaces.</p>
+                <p>You do not need a computer science background to master clean, efficient research data workflows. This streamlined, premium micro-training is built specifically to address authentic academic challenges, letting you focus on what you do best: extracting meaningful insights and creating high-impact publications.</p>
                 
-                <div class="highlight-box">
-                    <p>Designed for social sciences, humanities, STEM, and professional disciplines alike. If you handle student metrics, surveys, or institutional datasets, this is for you.</p>
+                <div class="quote-callout">
+                    <p>No corporate analogies. No software-sales jargon. Just direct, highly applicable solutions for grading networks, course design data, and journal-ready research methodologies.</p>
                 </div>
             </div>
 
-            <!-- 5-Day Plan -->
-            <div class="curriculum">
-                <h2>What We'll Cover Over 5 Days:</h2>
+            <!-- Curriculum Layout -->
+            <div class="curriculum-timeline">
+                <h2>The 5-Day Roadmap</h2>
                 
-                <div class="day-row">
-                    <span class="day-num">Day 1</span>
-                    <p class="day-title">Excel Automation: Reclaim Your Sanity</p>
-                    <p class="day-text">Stop the repetitive headache of manual grading. Learn simple, time-saving workflows to structure and process student metrics instantly.</p>
+                <div class="timeline-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Excel Automation</h3>
+                        <p>Stop wasting time manually updating grading sheets. Build robust, self-calculating frameworks that scale with your classes.</p>
+                    </div>
                 </div>
 
-                <div class="day-row">
-                    <span class="day-num">Day 2</span>
-                    <p class="day-title">Power BI Dashboards: Ditch Clunky Charts</p>
-                    <p class="day-text">Move past static, black-and-white charts. Create clean, interactive, and visually striking dashboards that capture reviewers' and publishers' attention.</p>
+                <div class="timeline-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Power BI Dashboards</h3>
+                        <p>Turn flat tables into rich, interactive data visualizations that naturally stand out to peer reviewers and institutional boards.</p>
+                    </div>
                 </div>
 
-                <div class="day-row">
-                    <span class="day-num">Day 3</span>
-                    <p class="day-title">Python Fundamentals: Skip the Jargon</p>
-                    <p class="day-text">Skip the programmer's rabbit hole. Learn exactly the 10% of Python libraries (like Pandas) that handle 90% of your real-world data cleaning needs.</p>
+                <div class="timeline-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Python Fundamentals</h3>
+                        <p>Cut through programming fatigue. Master the 10% of Python libraries (like Pandas) that handle 90% of your real academic data cleaning.</p>
+                    </div>
                 </div>
 
-                <div class="day-row">
-                    <span class="day-num">Day 4</span>
-                    <p class="day-title">Data Cleaning & Analysis: Order from Chaos</p>
-                    <p class="day-text">Turn messy, unstructured survey responses and raw research inputs into clean, analysis-ready datasets without manual errors.</p>
+                <div class="timeline-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Advanced Data Cleaning</h3>
+                        <p>Format unstructured surveys and messy institutional outputs into highly accurate, structured datasets ready for any validation pipeline.</p>
+                    </div>
                 </div>
 
-                <div class="day-row">
-                    <span class="day-num">Day 5</span>
-                    <p class="day-title">Future-Proof Your Career: Open New Doors</p>
-                    <p class="day-text">Leverage your new data skills to position yourself for competitive global grants, promotions, and cross-disciplinary collaborations.</p>
+                <div class="timeline-step">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <h3>Future-Proofing Your Output</h3>
+                        <p>Scale your data capabilities to capture competitive global grants, drive new cross-disciplinary projects, and unlock rapid career milestones.</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Main CTA Section with Tally Form -->
-            <div class="cta-area">
-                <p class="cta-heading">Ready to master your research and reclaim your weekends?</p>
-                <p class="cta-sub">Get instant, free access to the starter kit right now.</p>
-                <a href="https://tally.so/r/44y0vd" target="_blank" class="btn">CLAIM YOUR FREE STARTER KIT NOW!</a>
+            <!-- High Converting Direct Tally Link CTA -->
+            <div class="action-panel">
+                <h2>Ready to claim your free starter kit?</h2>
+                <p>Take control of your academic data and protect your personal time starting today.</p>
+                <a href="https://tally.so/r/44y0vd" target="_blank" class="btn-primary">CLAIM YOUR STARTER KIT NOW!</a>
             </div>
+
         </div>
 
-        <!-- 5 Biases / FAQs Section -->
-        <div class="faq-container">
-            <h2>Address Your Hesitations</h2>
+        <!-- FAQ Section addressing Skepticism/Prejudices -->
+        <div class="faq-block">
+            <h2>Addressing Your Hesitations</h2>
 
-            <div class="faq-item">
-                <div class="faq-question">
+            <div class="accordion-item">
+                <div class="accordion-header">
                     <span>How can I fit this in? I'm already buried under grading and research.</span>
-                    <span class="faq-icon"></span>
+                    <span class="accordion-icon">+</span>
                 </div>
-                <div class="faq-answer">
-                    <p class="faq-answer-content">This training is built with zero fluff specifically for busy academics. The daily lessons are short, bite-sized, and designed to save you time immediately. If you can spare 15 minutes a day, you will easily save hours on your next grading cycle.</p>
+                <div class="accordion-content">
+                    <p class="accordion-content-inner">This training is built with zero fluff specifically for busy academics. The daily lessons are short, bite-sized, and designed to save you time immediately. If you can spare 15 minutes a day, you will easily save hours on your next grading cycle.</p>
                 </div>
             </div>
 
-            <div class="faq-item">
-                <div class="faq-question">
+            <div class="accordion-item">
+                <div class="accordion-header">
                     <span>I have absolutely no programming experience. Will I get lost?</span>
-                    <span class="faq-icon"></span>
+                    <span class="accordion-icon">+</span>
                 </div>
-                <div class="faq-answer">
-                    <p class="faq-answer-content">Not at all. You don't need a computer science degree to be data-savvy. We bypass the complex jargon and focus entirely on visual, step-by-step application. If you can navigate basic software, you can easily master these workflows.</p>
+                <div class="accordion-content">
+                    <p class="accordion-content-inner">Not at all. You don't need a computer science degree to be data-savvy. We bypass the complex jargon and focus entirely on visual, step-by-step application. If you can navigate basic software, you can easily master these workflows.</p>
                 </div>
             </div>
 
-            <div class="faq-item">
-                <div class="faq-question">
+            <div class="accordion-item">
+                <div class="accordion-header">
                     <span>Why should I switch from SPSS or manual spreadsheets?</span>
-                    <span class="faq-icon"></span>
+                    <span class="accordion-icon">+</span>
                 </div>
-                <div class="faq-answer">
-                    <p class="faq-answer-content">Manual tracking leads to human error and clunky SPSS menus are rigid. Modern data skills make your data pipelines clean, dynamic, and reproducible. Plus, these skills are highly sought after by modern funding bodies and international journals.</p>
+                <div class="accordion-content">
+                    <p class="accordion-content-inner">Manual tracking leads to human error and clunky SPSS menus are rigid. Modern data skills make your data pipelines clean, dynamic, and reproducible. Plus, these skills are highly sought after by modern funding bodies and international journals.</p>
                 </div>
             </div>
 
-            <div class="faq-item">
-                <div class="faq-question">
+            <div class="accordion-item">
+                <div class="accordion-header">
                     <span>Do I need to buy expensive software or licenses?</span>
-                    <span class="faq-toggle"></span>
+                    <span class="accordion-icon">+</span>
                 </div>
-                <div class="faq-answer">
-                    <p class="faq-answer-content">Absolutely not. We rely on standard tools you likely already have (like Excel) and powerful, completely free, open-source options (like Python and Power BI Desktop) that won't cost you or your department anything.</p>
+                <div class="accordion-content">
+                    <p class="accordion-content-inner">Absolutely not. We rely on standard tools you likely already have (like Excel) and powerful, completely free, open-source options (like Python and Power BI Desktop) that won't cost you or your department anything.</p>
                 </div>
             </div>
 
-            <div class="faq-item">
-                <div class="faq-question">
+            <div class="accordion-item">
+                <div class="accordion-header">
                     <span>Is this just corporate training repurposed for academics?</span>
-                    <span class="faq-icon"></span>
+                    <span class="accordion-icon">+</span>
                 </div>
-                <div class="faq-answer">
-                    <p class="faq-answer-content">No. This was created by an academic, specifically for academic workflows. The examples, datasets, and scenarios we use are based on student performance, institutional datasets, survey research, and journal requirements—not corporate sales metrics.</p>
+                <div class="accordion-content">
+                    <p class="accordion-content-inner">No. This was created by an academic, specifically for academic workflows. The examples, datasets, and scenarios we use are based on student performance, institutional datasets, survey research, and journal requirements—not corporate sales metrics.</p>
                 </div>
             </div>
         </div>
@@ -380,19 +451,27 @@
         </footer>
     </div>
 
-    <!-- Accordion Script -->
+    <!-- Smooth FAQ Accordion Logic -->
     <script>
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.parentElement;
-                const answer = item.querySelector('.faq-answer');
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const content = item.querySelector('.accordion-content');
                 
+                // Close other items
+                document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.accordion-content').style.maxHeight = '0';
+                    }
+                });
+
+                // Toggle target item
                 item.classList.toggle('active');
-                
                 if (item.classList.contains('active')) {
-                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    content.style.maxHeight = content.scrollHeight + 'px';
                 } else {
-                    answer.style.maxHeight = "0";
+                    content.style.maxHeight = '0';
                 }
             });
         });
