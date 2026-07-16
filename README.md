@@ -1,2 +1,102 @@
 # my-landing-page-
-my landing page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Site Analysis Guide</title>
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --secondary: #18BC9C;
+            --dark: #2C3E50;
+            --light: #ECF0F1;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f6fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--light);
+            padding-bottom: 8px;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background-color: #128f76;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Site Analysis & Drafting Guide</h1>
+        <p>Interactive Studio Reference Document</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Step-by-Step Site Layout</h2>
+            <p>Welcome! Use this quick-reference guide to follow along during our design studio session. We will cover boundary dimensioning, intersecting planes, and basic building typology zoning.</p>
+            
+            <ol>
+                <li><strong>Establish Boundaries:</strong> Scale and draft the main 5,000 sqm site perimeter.</li>
+                <li><strong>Analyze the Context:</strong> Map out orientation, wind patterns, and access points.</li>
+                <li><strong>Apply Intersecting Planes:</strong> Use geometric intersections to organize zoning boundaries.</li>
+                <li><strong>Dimensioning:</strong> Apply standard notations for setbacks and building footprints.</li>
+            </ol>
+
+            <a href="#" class="btn">Download Handout PDF</a>
+        </div>
+    </div>
+
+</body>
+</html>
